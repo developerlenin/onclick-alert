@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Onclick Alert</title>
+	</head>
+	<style>
+	.para{
+	  font-size:20px;
+	  line-height: 40px;
+	   
+	   
+	}
+	</style>
+	<body>
+ <button onclick= "run()">Start</button>
+ <div id="para1"></div>
+	<script>
+	 function run(){
+	 var para1=document.getElementById("para1");
+		
+		 for(var i=1;i<10;i++){
+		 var paragraph= document.createElement("p");
+		 paragraph.setAttribute('class', 'para' +i);
+		 para1.appendChild(paragraph);
+		  paragraph.innerHTML+= "Paragraph " + i + "<br>";
+		  paragraph.onclick=onClickForP;
+		  }
+	 }
+	 
+	 function onClickForP(){
+		alert("Working !");
+	 }
+	
+	</script>
+	</body>
+	</html>
